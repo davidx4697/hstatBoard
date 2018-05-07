@@ -1,6 +1,8 @@
+package hstatBoard;
+
 /* package hstatboard;
- import java.util.Scanner;
- public class other {
+import java.util.Scanner;
+public class other {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("You are in the OTHER section");
@@ -11,7 +13,6 @@
 		System.out.println("Anonymous says, " + user_thought);
 	}
 } */
-package hstatboard;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -54,20 +55,18 @@ public class other extends JFrame{
 		thoughtbutton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input = thoughttext.getText();
-				thoughtlabel.setText("<html> <br>"+input+"</html>"); //fix input to center!
+				thoughtlabel.setHorizontalAlignment(JLabel.CENTER);
+				thoughtlabel.setText(input); //fix input to center!
 			}
 		});
 		
-		
-		thoughtpanel.add(thoughtlabel, SwingConstants.CENTER);
+		//hi
+		thoughtpanel.add(thoughtlabel);
 		add( thoughtpanel);
 	}
 	public static void main (String [] args) {
 		other board = new other();
 	}
-	
-	
-	//https://stackoverflow.com/questions/19506769/how-to-center-jlabel-in-jframe-swing?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
 }  
 		
 	
