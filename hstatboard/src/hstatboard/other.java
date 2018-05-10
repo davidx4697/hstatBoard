@@ -31,6 +31,7 @@ public class other extends JFrame{
 	JPanel thoughtpanel = new JPanel();
 	JLabel thoughtlabel = new JLabel("<html> <br> </html");
 	JLabel mindlabel = new JLabel("whats on your mind?");
+	JLabel replylabel = new JLabel("reply",SwingConstants.LEFT);
 	JTextField thoughttext = new JTextField(30); //30 means length of field horizontally 
 	JButton thoughtbutton = new JButton("Enter");
 	
@@ -42,6 +43,7 @@ public class other extends JFrame{
 		
 		thoughtpanel.add(mindlabel); //What's on your mind on the left
 		thoughtpanel.add(thoughttext);
+		thoughtpanel.add(replylabel);
 		
 		thoughttext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -56,11 +58,13 @@ public class other extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				String input = thoughttext.getText();
 				thoughtlabel.setHorizontalAlignment(JLabel.CENTER);
+				replylabel.setHorizontalAlignment(JLabel.LEFT);
 				thoughtlabel.setText(input); //fix input to center!
+				
 			}
 		});
+		s
 		
-		//hi
 		thoughtpanel.add(thoughtlabel);
 		add( thoughtpanel);
 	}
