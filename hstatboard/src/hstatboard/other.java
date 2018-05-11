@@ -27,11 +27,14 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JFrame;
 
-public class other extends JFrame{  
+public class other extends JFrame{
+	
+	String thoughts[] = {};
+	
 	JPanel thoughtpanel = new JPanel();
 	JLabel thoughtlabel = new JLabel("<html> <br> </html");
 	JLabel mindlabel = new JLabel("whats on your mind?");
-	JLabel replylabel = new JLabel("reply",SwingConstants.LEFT);
+	JLabel replylabel = new JLabel("<html> <br> " + "reply" + " </html");
 	JTextField thoughttext = new JTextField(30); //30 means length of field horizontally 
 	JButton thoughtbutton = new JButton("Enter");
 	
@@ -43,7 +46,7 @@ public class other extends JFrame{
 		
 		thoughtpanel.add(mindlabel); //What's on your mind on the left
 		thoughtpanel.add(thoughttext);
-		thoughtpanel.add(replylabel);
+		//thoughtpanel.add(replylabel);
 		
 		thoughttext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -63,10 +66,16 @@ public class other extends JFrame{
 				
 			}
 		});
-		s
+		
 		
 		thoughtpanel.add(thoughtlabel);
 		add( thoughtpanel);
+		
+		if ("".equals(thoughtlabel)) {
+		}else{ 	
+			System.out.println("Working!");
+			
+		}
 	}
 	public static void main (String [] args) {
 		other board = new other();
