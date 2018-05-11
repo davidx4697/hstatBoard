@@ -29,7 +29,7 @@ import javax.swing.JFrame;
 
 public class other extends JFrame{
 	
-	String thoughts[] = {};
+	ArrayList<String> thoughts = new ArrayList<String>();
 	
 	JPanel thoughtpanel = new JPanel();
 	JLabel thoughtlabel = new JLabel("<html> <br> </html");
@@ -71,11 +71,9 @@ public class other extends JFrame{
 		thoughtpanel.add(thoughtlabel);
 		add( thoughtpanel);
 		
-		if ("".equals(thoughtlabel)) {
-		}else{ 	
-			System.out.println("Working!");
-			
-		}
+		
+		
+		
 	}
 	public static void main (String [] args) {
 		other board = new other();
